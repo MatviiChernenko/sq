@@ -92,16 +92,25 @@ def add_links():
     conn.commit()
     close()
 
+def show_quiz():
+    open()
+    curs.execute("SELECT name FROM quiz")
+    result = curs.fetchall()
+    close()
+    return result
+
+def next_question(quiz,question):
+    open()
+    curs.execute("""SELECT question.id, question.question, question.right_answer,question.wrong_answer1,question.wrong_answer2,question.wrong_answer3
+                 FROM question, quiz_content
+                 WHERE question.id == (?) AND quiz_content.question_id == question.id""", (question,quiz))
+
 def main():
     clea_db()
     create()
-    add_quiz()
     add_question()
+    add_quiz()
     add_links()
 
 if __name__ == "__main__":
     main()
-    open()
-    curs.execute("SELECT * FROM question, quiz")
-    print(curs.fetchall())
-    close()
