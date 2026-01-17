@@ -9,6 +9,7 @@ def start_quiz(quiz=-1):
 
 def quiz_form():
     quiz_list = show_quiz()
+    print(quiz_list)
     return render_template("index.html", quiz_list= quiz_list)
 
 def index():
