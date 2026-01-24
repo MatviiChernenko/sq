@@ -99,11 +99,11 @@ def show_quiz():
     close()
     return result
 
-def next_question(quiz,question):
+def next_question(quiz):
     open()
     curs.execute("""SELECT question.id, question.question, question.right_answer,question.wrong_answer1,question.wrong_answer2,question.wrong_answer3
-                 FROM question, quiz_content
-                 WHERE question.id == (?) AND quiz_content.quiz_id == (?) AND quiz_content.question_id == question.id""", (question,quiz))
+                    FROM question, quiz_content
+                    WHERE quiz_content.quiz_id == (?) AND quiz_content.question_id == question.id""", (quiz,))
     result = curs.fetchall()
     close()
     return result

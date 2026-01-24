@@ -1,0 +1,48 @@
+html{
+    width: 100% ;
+    height: 100% ;
+}
+
+.index-body{
+    width: 100% ;
+    height: 100% ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-start-container{
+    width: 55%;
+    height: 50%;
+    padding: 5% 10%;
+    border: 2px solid #0df5f5;
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.test-body{
+    width: 100% ;
+    height: 100% ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-start-container{
+    width: 55%;
+    height: 50%;
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
