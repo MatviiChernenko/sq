@@ -18,19 +18,37 @@ html{
     overflow: hidden;
 }
 
+@keyframes float{
+    0%{
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50%{
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
 .bg-word {
     position: absolute;
     z-index: 0;          
     font-weight: bold;
     font-size: 3.8rem;
     pointer-events: none;
+    animation: float 5s ease-in-out infinite
 }
 
 #word1 { top: 10%; left: 5%; transform: rotate(-15deg); }
-#word2 { top: 20%; right: 10%; transform: rotate(20deg); }
+#word2 { top: 10%; right: 10%; transform: rotate(20deg); }
 #word3 { bottom: 15%; left: 15%; transform: rotate(10deg); }
-#word4 { bottom: 30%; right: 5%; transform: rotate(-25deg); }
+#word4 { bottom: 10%; right: 15%; transform: rotate(-25deg); }
 #word5 { bottom: 50%; left: 20%; transform: rotate(10deg); }
+#word6 { bottom: 50%; right: 15%; transform: rotate(18deg); }
+#word7 { top: 10%; left: 45%; transform: rotate(-25deg); }
+#word8 { bottom: 10%; right: 45%; transform: rotate(-4deg); }
 
 .index-start-container{
     width: 55%;
@@ -58,12 +76,16 @@ html{
     width: 55%;
     height: 50%;
     padding: 5% 10%;
+    padding: 10px 20px;
+    display: inline-block;
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
+
 
 .result-body{
     width: 100% ;
@@ -76,4 +98,18 @@ html{
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.result-start-container{
+    width: 55%;
+    height: 50%;
+    padding: 5% 10%;
+    padding: 10px 20px;
+    display: inline-block;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }

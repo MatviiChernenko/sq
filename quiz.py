@@ -2,6 +2,8 @@ from flask import Flask, session, redirect, url_for, render_template, request
 from db_script import *
 import random
 
+image_list = ["static/image/test_1.png","static/image/test_2.jpg"]
+
 def start_quiz(quiz=-1):
     session["quiz"] = quiz
     session["next_question"] = next_question(quiz)
@@ -25,6 +27,7 @@ def index():
         return redirect(url_for("test"))
     
 def equals_question(answer,right_answer):
+    #print(answer,right_answer,553535355353535)
     if answer == right_answer:
         session["result"] += 1
     session["current_question"] += 1
@@ -35,7 +38,7 @@ def test():
     else:
         print(2)
         if request.method == "POST":
-            equals_question(request.form.get("answer"), session["next_question"][session["current_question"]-1][2])
+            equals_question(request.form.get("answer"), session["next_question"][session["current_question"]][2])
         if session["next_question"] is None or session["current_question"] == session["total"]:
             return redirect(url_for("result"))
         else:
@@ -44,6 +47,7 @@ def test():
             random.shuffle(tmp_questions)
             print(session["next_question"])
             return render_template("test.html",
+                                   image = image_list[session["current_question"]],
                                    question= session["next_question"][session["current_question"]][1],
                                    answer_list= tmp_questions,
                                    question_id= session["next_question"][session["current_question"]][0])
