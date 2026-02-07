@@ -5,15 +5,22 @@
         <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
-    <body style = "background-image: url({{image}}); background-position: center ; background-repeat: no-repeat; background-size: cover;">
+    <body class = "test-body" style="background-image: url({{image}}); background-position: center ; background-repeat: no-repeat; background-size: cover;">
+        <span class="bg-word-test" id="word1_test">🧐</span>
+        <span class="bg-word-test" id="word2_test">❓</span>
+        <span class="bg-word-test" id="word3_test">🤨</span>
+        <span class="bg-word-test" id="word4_test">🥸</span>
+        <span class="bg-word-test" id="word5_test">❓</span>
+        <span class="bg-word-test" id="word6_test">😀</span>
+        <span class="bg-word-test" id="word7_test">🤓</span>
+        <span class="bg-word-test" id="word8_test">😯</span>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <div class="test-start-container">
-            
-            <h1>{{question}}</h1>
+            <h1 style="color: white; -webkit-text-stroke: 1.5px black;">{{question}}</h1>
             <form method="post">
                 {% for answer in answer_list %}
                     <input type="radio" value="{{answer}}" name="answer" id="{{answer}}" autocomplete="off">
-                    <label for="{{answer}}">{{answer}}</label>
+                    <label class="p-3 mb-2 bg-dark text-white" for="{{answer}}">{{answer}}</label>
                 {% endfor %}
                 <input type="submit" value="Відповісти">
             </form>

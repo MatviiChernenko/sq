@@ -2,7 +2,7 @@ from flask import Flask, session, redirect, url_for, render_template, request
 from db_script import *
 import random
 
-image_list = ["static/image/test_1.png","static/image/test_2.jpg"]
+image_list = ["static/image/test_1.png","static/image/test_2.jpg","static/image/test_3.png","static/image/test_4.avif","static/image/test_5.webp"]
 
 def start_quiz(quiz=-1):
     session["quiz"] = quiz
@@ -66,4 +66,5 @@ app.secret_key = "32131321"
 
 if __name__ == "__main__":
     app.run()
+
 

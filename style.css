@@ -32,7 +32,7 @@ html{
     }
 }
 
-.bg-word {
+.bg-word-index {
     position: absolute;
     z-index: 0;          
     font-weight: bold;
@@ -41,14 +41,50 @@ html{
     animation: float 5s ease-in-out infinite
 }
 
-#word1 { top: 10%; left: 5%; transform: rotate(-15deg); }
-#word2 { top: 10%; right: 10%; transform: rotate(20deg); }
-#word3 { bottom: 15%; left: 15%; transform: rotate(10deg); }
-#word4 { bottom: 10%; right: 15%; transform: rotate(-25deg); }
-#word5 { bottom: 50%; left: 20%; transform: rotate(10deg); }
-#word6 { bottom: 50%; right: 15%; transform: rotate(18deg); }
-#word7 { top: 10%; left: 45%; transform: rotate(-25deg); }
-#word8 { bottom: 10%; right: 45%; transform: rotate(-4deg); }
+#word1_index { top: 10%; left: 5%; transform: rotate(-15deg); }
+#word2_index { top: 10%; right: 10%; transform: rotate(20deg); }
+#word3_index { bottom: 15%; left: 15%; transform: rotate(10deg); }
+#word4_index { bottom: 10%; right: 15%; transform: rotate(-25deg); }
+#word5_index { bottom: 50%; left: 20%; transform: rotate(10deg); }
+#word6_index { bottom: 50%; right: 15%; transform: rotate(18deg); }
+#word7_index { top: 10%; left: 45%; transform: rotate(-25deg); }
+#word8_index { bottom: 10%; right: 45%; transform: rotate(-4deg); }
+
+.bg-word-test {
+    position: absolute;
+    z-index: 0;          
+    font-weight: bold;
+    font-size: 3.8rem;
+    pointer-events: none;
+    animation: float 5s ease-in-out infinite
+}
+
+#word1_test { top: 10%; left: 5%; transform: rotate(-15deg); }
+#word2_test { top: 10%; right: 10%; transform: rotate(20deg); }
+#word3_test { bottom: 15%; left: 5%; transform: rotate(10deg); }
+#word4_test { bottom: 10%; right: 15%; transform: rotate(-25deg); }
+#word5_test { bottom: 50%; left: 10%; transform: rotate(10deg); }
+#word6_test { bottom: 50%; right: 11%; transform: rotate(18deg); }
+#word7_test { top: 10%; left: 45%; transform: rotate(-25deg); }
+#word8_test { bottom: 10%; right: 50%; transform: rotate(-4deg); }
+
+.bg-word-result {
+    position: absolute;
+    z-index: 0;          
+    font-weight: bold;
+    font-size: 3.8rem;
+    pointer-events: none;
+    animation: float 5s ease-in-out infinite
+}
+
+#word1_result { top: 10%; left: 5%; transform: rotate(-15deg); }
+#word2_result { top: 10%; right: 10%; transform: rotate(20deg); }
+#word3_result { bottom: 15%; left: 5%; transform: rotate(10deg); }
+#word4_result { bottom: 10%; right: 15%; transform: rotate(-25deg); }
+#word5_result { bottom: 50%; left: 10%; transform: rotate(10deg); }
+#word6_result { bottom: 50%; right: 11%; transform: rotate(18deg); }
+#word7_result { top: 10%; left: 45%; transform: rotate(-25deg); }
+#word8_result { bottom: 10%; right: 50%; transform: rotate(-4deg); }
 
 .index-start-container{
     width: 55%;
@@ -67,9 +103,16 @@ html{
 .test-body{
     width: 100% ;
     height: 100% ;
+    background-image: url(image/index_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     display:flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .test-start-container{
@@ -85,6 +128,7 @@ html{
     align-items: center;
     gap: 30px;
 }
+
 
 
 .result-body{
